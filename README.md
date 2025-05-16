@@ -31,8 +31,8 @@ A sleek and modern GST (Goods and Services Tax) calculator with a professional d
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/gstcal-app.git
-   cd gstcal-app
+   git clone https://github.com/namanyadav963/easy-gst.git
+   cd easy-gst
    ```
 
 2. Install dependencies:
