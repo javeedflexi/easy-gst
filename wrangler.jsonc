@@ -5,11 +5,11 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
     "name": "easy-gst-w",
-    "main": "worker/index.js",
+    //"main": "worker/index.js",
     "compatibility_date": "2025-06-20",
     "assets": {
         "not_found_handling": "single-page-application",
-        "directory": "./dist/index.html/"
+        "directory": "./dist/"
     },
     "observability": {
         "enabled": true
