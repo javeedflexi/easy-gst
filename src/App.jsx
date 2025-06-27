@@ -144,7 +144,7 @@ function App() {
 
       {/* Footer */}
       <div className="mt-8 text-sm text-gray-500 text-center">
-        <p>© {new Date().getFullYear()} • Powered By <a href="https://flexifunnels.com" target="_blank" style="color: white;">FlexiFunnels.</a> • Build Websites, Funnels & Courses Without Coding... Using AI</p>
+        <p>© {new Date().getFullYear()} • Powered By <a href="https://flexifunnels.com" target="_blank">FlexiFunnels.</a> • Build Websites, Funnels & Courses Without Coding... Using AI</p>
       </div>
     </div>
   );
