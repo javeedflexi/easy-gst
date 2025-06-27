@@ -6,7 +6,7 @@ function App() {
   const [gstRate, setGstRate] = useState(18);
   const [includeGst, setIncludeGst] = useState(false);
   const [showResults, setShowResults] = useState(false);
-  
+
   // Show results with animation when amount is entered
   useEffect(() => {
     if (amount) {
@@ -17,10 +17,10 @@ function App() {
       setShowResults(false);
     }
   }, [amount, gstRate, includeGst]);
-  
+
   const calculateGst = () => {
     const parsedAmount = parseFloat(amount) || 0;
-    
+
     if (includeGst) {
       // If amount includes GST, calculate base amount and GST
       const baseAmount = (parsedAmount * 100) / (100 + parseFloat(gstRate));
@@ -51,7 +51,7 @@ function App() {
         {/* Background decorative elements */}
         <div className="absolute -top-10 -left-10 w-20 h-20 bg-green-500 rounded-full filter blur-3xl opacity-10"></div>
         <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-emerald-500 rounded-full filter blur-3xl opacity-10"></div>
-        
+
         {/* Card with backdrop blur */}
         <div className="backdrop-blur-sm z-10 relative shadow-2xl rounded-xl overflow-hidden">
           {/* Header with animated gradient */}
@@ -59,7 +59,7 @@ function App() {
             <h1 className="text-3xl font-bold tracking-tight text-white">Flexi-GST Calculator</h1>
             <p className="text-green-100 mt-2 text-sm">Fast, accurate tax calculations</p>
           </div>
-          
+
           {/* Main content card */}
           <div className="bg-gray-800 p-6 border-t border-gray-700">
             <div className="space-y-6">
@@ -79,7 +79,7 @@ function App() {
                   />
                 </div>
               </div>
-              
+
               {/* GST Rate Selector */}
               <div>
                 <label className="block text-green-300 text-sm font-medium mb-2">
@@ -91,18 +91,17 @@ function App() {
                       key={rate}
                       type="button"
                       onClick={() => setGstRate(rate)}
-                      className={`rounded-lg py-2 px-4 font-medium transition-all ${
-                        parseInt(gstRate) === rate
-                          ? 'bg-green-600 text-white shadow-glow-green translate-y-[-1px]'
-                          : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
-                      }`}
+                      className={`rounded-lg py-2 px-4 font-medium transition-all ${parseInt(gstRate) === rate
+                        ? 'bg-green-600 text-white shadow-glow-green translate-y-[-1px]'
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
+                        }`}
                     >
                       {rate}%
                     </button>
                   ))}
                 </div>
               </div>
-              
+
               {/* GST Inclusion Toggle */}
               <div className="flex items-center">
                 <label className="relative inline-flex items-center cursor-pointer">
@@ -117,7 +116,7 @@ function App() {
                 </label>
               </div>
             </div>
-            
+
             {/* Results Section with animation */}
             {results && (
               <div className={`mt-8 overflow-hidden transition-all duration-500 ease-out ${showResults ? 'opacity-100 max-h-96' : 'opacity-0 max-h-0'}`}>
@@ -142,10 +141,10 @@ function App() {
           </div>
         </div>
       </div>
-      
+
       {/* Footer */}
       <div className="mt-8 text-sm text-gray-500 text-center">
-        <p>© {new Date().getFullYear()} • GST Calculator • Designed for internal use</p>
+        <p>© {new Date().getFullYear()} • Powered By <a href="https://flexifunnels.com" target="_blank" style="color: white;">FlexiFunnels.</a> • Build Websites, Funnels & Courses Without Coding... Using AI</p>
       </div>
     </div>
   );
